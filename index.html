@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Sicher: nur eigene Dateien, keine externen Server, keine Formulare, kein eval -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Rohrwelt</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script src="audio.js" defer></script>
+<script src="game.js" defer></script>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<button id="btnMusic" class="hbtn corner" aria-label="Musik an oder aus">🎸</button>
+<div id="hud" hidden>
+  <div id="topbar">
+    <button id="btnPause" class="hbtn" aria-label="Pause">⏸️</button>
+    <div id="lvl"></div>
+    <div id="timebar"><div id="timefill"></div><span id="timetxt"></span></div>
+    <div id="coinbox"></div>
+  </div>
+  <div id="msg"></div>
+  <div id="bottombar">
+    <div class="barrow"><span class="lbl">🏠 Lager</span><div id="store"></div></div>
+    <div class="barrow"><span class="lbl" id="toolLbl"></span><span class="lbl">🎒 Tasche</span><div id="inv"></div></div>
+  </div>
+</div>
+<div id="overlay" hidden><div id="panel"></div></div>
+</body>
+</html>
